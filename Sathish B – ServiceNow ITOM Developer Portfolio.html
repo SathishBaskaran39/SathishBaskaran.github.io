@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sathish B – ServiceNow ITOM Developer</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Source+Sans+3:wght@400;600&display=swap">
+<style>
+:root{--bg:#f2f5f7;--surf:#fff;--ink:#12303f;--mute:#53697a;--line:#d5dee5;--teal:#1b7f79;--amber:#d98a0b;--tealbg:#dff1ef;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1c25;--surf:#152732;--ink:#e6eef3;--mute:#9db1bf;--line:#26404e;--teal:#4fc3ba;--amber:#f0b548;--tealbg:#16363a}}
+:root[data-theme="dark"]{--bg:#0e1c25;--surf:#152732;--ink:#e6eef3;--mute:#9db1bf;--line:#26404e;--teal:#4fc3ba;--amber:#f0b548;--tealbg:#16363a}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 "Source Sans 3",system-ui,sans-serif}
+h1,h2,h3{font-family:"Bricolage Grotesque",system-ui,sans-serif;line-height:1.1;margin:0}
+a{color:var(--teal)}a:focus-visible,button:focus-visible{outline:3px solid var(--amber);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 22px}
+nav{display:flex;gap:22px;justify-content:space-between;align-items:center;padding:18px 0;flex-wrap:wrap}
+nav b{font-family:"Bricolage Grotesque",sans-serif;font-size:20px}
+nav div{display:flex;gap:18px;flex-wrap:wrap}nav a{color:var(--mute);text-decoration:none;font-weight:600;font-size:15px}nav a:hover{color:var(--ink)}
+.hero{padding:44px 0 56px;display:grid;grid-template-columns:1.05fr 1fr;gap:44px;align-items:center}
+.hero h1{font-size:clamp(40px,6vw,68px);font-weight:800;letter-spacing:-.025em}
+.hero p.lead{font-size:20px;color:var(--mute);max-width:34em;margin:20px 0 26px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:12px 22px;border-radius:8px;font-weight:600;text-decoration:none;border:2px solid var(--ink);color:var(--ink);background:transparent;font-size:16px;font-family:inherit;cursor:pointer}
+.btn.pri{background:var(--ink);color:var(--bg)}
+.pipe{background:var(--surf);border:1px solid var(--line);border-radius:14px;padding:22px}
+.pipe h3{font-size:18px;margin-bottom:4px}.pipe small{color:var(--mute);display:block;margin-bottom:16px;font-size:14px}
+.cols{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;min-height:150px}
+.col h4{margin:0 0 8px;font-size:14px;color:var(--mute);font-weight:600}
+.col .n{font-family:"Bricolage Grotesque",sans-serif;font-size:34px;font-weight:800;line-height:1}
+.dots{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.dot{width:14px;height:14px;border-radius:50%;background:var(--mute);opacity:.55;transition:background .5s,opacity .5s,transform .5s}
+.pipe.on .dot{opacity:1;background:var(--g)}
+.al{display:flex;flex-wrap:wrap;gap:5px;margin-top:10px}
+.al i{height:12px;width:24px;border-radius:3px;background:var(--amber);transition:width .5s,background .5s}
+.pipe.on .al i{width:100%}
+.inc{margin-top:10px;height:44px;border-radius:8px;border:2px dashed var(--line);display:grid;place-items:center;font-size:13px;font-weight:600;color:var(--mute);transition:all .5s}
+.pipe.on .inc{border:2px solid var(--teal);background:var(--tealbg);color:var(--teal)}
+.pipe button{margin-top:18px;width:100%}
+section{padding:60px 0;border-top:1px solid var(--line)}
+section>.wrap>h2{font-size:clamp(28px,4vw,40px);margin-bottom:26px;letter-spacing:-.015em}
+.about{display:grid;grid-template-columns:2fr 1fr;gap:40px}.about p{margin:0 0 14px;max-width:38em}
+.facts{background:var(--surf);border:1px solid var(--line);border-radius:12px;padding:18px 20px;align-self:start}
+.facts dt{font-size:13px;color:var(--mute);margin-top:12px}.facts dt:first-child{margin-top:0}.facts dd{margin:0;font-weight:600}
+.tl{border-left:3px solid var(--teal);margin-left:6px;padding-left:26px}
+.job{position:relative;padding-bottom:34px}.job:last-child{padding-bottom:0}
+.job::before{content:"";position:absolute;left:-36px;top:7px;width:13px;height:13px;border-radius:50%;background:var(--bg);border:3px solid var(--teal)}
+.job h3{font-size:22px}.job .meta{color:var(--mute);margin:2px 0 10px;font-weight:600;font-size:15px}
+.job ul{margin:0;padding-left:20px}.job li{margin-bottom:6px;max-width:46em}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:18px}
+.card{background:var(--surf);border:1px solid var(--line);border-radius:12px;padding:22px}
+.card h3{font-size:19px;margin-bottom:8px}.card p{margin:0;color:var(--mute)}
+.proj{border-left:4px solid var(--amber)}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:26px 34px}
+.skills h3{font-size:16px;margin-bottom:8px}
+.tags{display:flex;flex-wrap:wrap;gap:7px}.tags span{background:var(--surf);border:1px solid var(--line);border-radius:6px;padding:3px 10px;font-size:15px}
+.cert{display:flex;gap:14px;align-items:flex-start}.cert b{font-family:"Bricolage Grotesque",sans-serif;font-size:19px;display:block}
+.cert .ic{flex:none;width:38px;height:38px;border-radius:50%;background:var(--tealbg);color:var(--teal);display:grid;place-items:center;font-weight:800}
+.contact{text-align:left}.contact p{font-size:20px;max-width:30em;color:var(--mute);margin:0 0 22px}
+footer{padding:26px 0 40px;color:var(--mute);font-size:14px;border-top:1px solid var(--line)}
+@media(max-width:800px){.hero,.about{grid-template-columns:1fr}.hero{gap:30px}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav><b>Sathish B</b><div><a href="#about">About</a><a href="#experience">Experience</a><a href="#work">Projects</a><a href="#skills">Skills</a><a href="#contact">Contact</a></div></nav>
+
+<header class="hero">
+<div>
+<h1>I turn monitoring noise into clear incidents.</h1>
+<p class="lead">Sathish B is a ServiceNow developer working in ITOM and ITSM. I connect monitoring tools to Event Management, correlate related alerts, and automate the path from event to incident.</p>
+<div class="btns"><a class="btn pri" href="#experience">See my experience</a><a class="btn" href="#contact">Get in touch</a></div>
+</div>
+<div class="pipe" id="pipe" aria-live="polite">
+<h3>From event to incident</h3>
+<small>An illustration of what alert correlation does.</small>
+<div class="cols">
+<div class="col"><h4>Events</h4><div class="n">12</div><div class="dots" id="dots"></div></div>
+<div class="col"><h4>Alerts</h4><div class="n" id="an">12</div><div class="al" id="al"></div></div>
+<div class="col"><h4>Incidents</h4><div class="n" id="in">12</div><div class="inc" id="inc">One per alert</div></div>
+</div>
+<button class="btn pri" id="tg" type="button">Apply correlation</button>
+</div>
+</header>
+</div>
+
+<section id="about"><div class="wrap"><h2>About</h2>
+<div class="about"><div>
+<p>I build event-driven operations on ServiceNow. I have integrated multiple monitoring sources through Push and Pull connectors, REST APIs and Scripted REST APIs, then shaped the data with Event Rules, Alert Management Rules and field mapping.</p>
+<p>Advanced correlation (tag-based, CMDB-based, rule-based and cross-source) groups related alerts so teams see fewer, more meaningful ones. I have also implemented AIOps LEAP Playbooks to shorten incident resolution paths and reduce manual work.</p>
+<p>Before ServiceNow development, I worked on CMDB data governance and data analytics, which is why I care about clean, trustworthy data.</p>
+</div>
+<dl class="facts"><dt>Role</dt><dd>ServiceNow Developer, CubeSimple</dd><dt>Focus</dt><dd>ITOM, ITSM, AIOps</dd><dt>Location</dt><dd>Chennai, India</dd><dt>Certified</dt><dd>CSA and CMDB/CSDM Implementation Specialist</dd></dl>
+</div></div></section>
+
+<section id="experience"><div class="wrap"><h2>Experience</h2>
+<div class="tl">
+<div class="job"><h3>ServiceNow Developer, CubeSimple</h3><div class="meta">May 2025 to present</div>
+<ul>
+<li>Built Event Management solutions: Event Rules, Alert Management Rules, event processing, alert correlation and automated incident creation.</li>
+<li>Developed Push and Pull connectors with REST and Scripted REST APIs to ingest events from third-party monitoring tools.</li>
+<li>Configured regex-based Event Rules and correlation (tag, CMDB, rule-based, automated, manual, cross-source) to group related alerts and reduce noise.</li>
+<li>Automated Event-to-Alert-to-Incident flows with Flows, Subflows and field mapping so CI, severity, priority and source carry through.</li>
+<li>Worked on Discovery and CMDB: Discovery Patterns, I&amp;R Rules, CI relationships and CMDB health.</li>
+<li>Configured Portals and Now Assist Skills, including LLM model setup, and delivered reports and dashboards for operational visibility.</li>
+<li>Contributed to client projects in AIOps and Agentic AI, UI Builder and Update Set management.</li>
+</ul></div>
+<div class="job"><h3>Process Executive, Patra Corporation</h3><div class="meta">Aug 2024 to Feb 2025</div>
+<ul><li>Ran data governance workflows to keep enterprise configuration records accurate and reliable.</li><li>Managed large volumes of data directly in the ServiceNow CMDB.</li></ul></div>
+<div class="job"><h3>Data Analyst Intern, Ai SPRY Pvt. Ltd, Chennai</h3><div class="meta">Dec 2023 to Jun 2024</div>
+<ul><li>Delivered client analytics projects using the CRISP-ML methodology, with EDA and data cleaning in Python and PostgreSQL.</li><li>Moved cleansed data into Power BI, Tableau and Looker Studio, and mentored junior interns.</li></ul></div>
+</div></div></section>
+
+<section id="work"><div class="wrap"><h2>Projects</h2>
+<div class="grid">
+<div class="card proj"><h3>Event-to-Alert-to-Incident automation and correlation</h3><p>Event Rules, Alert Management Rules and REST webhook integrations for ingestion and noise reduction. Tag-based, CMDB-based and cross-source correlation with Flow Designer subflows to automate incident creation and remediation.</p></div>
+<div class="card proj"><h3>Automated Discovery and infrastructure mapping</h3><p>Discovery Schedules across IP ranges, customized Patterns, Probes and IRE rules to prevent duplicate CIs, plus CMDB health checks, cleanup and parent-child relationship mapping.</p></div>
+</div></div></section>
+
+<section id="skills"><div class="wrap"><h2>Skills</h2>
+<div class="skills">
+<div><h3>ServiceNow core</h3><div class="tags"><span>Event Management</span><span>Discovery</span><span>CMDB</span><span>AIOps</span><span>Metric Intelligence</span><span>ITSM</span><span>Flow Designer</span><span>Now Assist</span></div></div>
+<div><h3>Event and alert management</h3><div class="tags"><span>Event Rules</span><span>Alert Management Rules</span><span>Tag-based correlation</span><span>CMDB-based correlation</span><span>Cross-source correlation</span><span>Alert-to-incident automation</span></div></div>
+<div><h3>Platform development</h3><div class="tags"><span>Client Scripts</span><span>Business Rules</span><span>Script Includes</span><span>Transform Maps</span><span>REST APIs</span><span>Update Sets</span><span>UI Builder</span><span>Portals</span></div></div>
+<div><h3>Languages and data</h3><div class="tags"><span>Python</span><span>Java</span><span>SQL</span><span>PostgreSQL</span><span>JavaScript</span><span>HTML/CSS</span><span>Power BI</span><span>Tableau</span><span>Looker Studio</span></div></div>
+</div></div></section>
+
+<section id="creds"><div class="wrap"><h2>Certifications and education</h2>
+<div class="grid">
+<div class="cert"><div class="ic">✓</div><div><b>Certified System Administrator (CSA)</b>ServiceNow</div></div>
+<div class="cert"><div class="ic">✓</div><div><b>Certified Implementation Specialist, Data Foundations</b>CMDB and CSDM</div></div>
+<div class="cert"><div class="ic">🎓</div><div><b>B.E. Computer Science and Engineering</b>Paavai Engineering College, Namakkal, 2019 to 2023</div></div>
+</div></div></section>
+
+<section id="contact"><div class="wrap contact"><h2>Contact</h2>
+<p>Open to ServiceNow ITOM, ITSM and AIOps work. Email is the quickest way to reach me.</p>
+<div class="btns"><a class="btn pri" href="mailto:Sathish.b@cubesimple.com">Sathish.b@cubesimple.com</a><a class="btn" href="https://linkedin.com/in/sathish-baskaran-557951352" target="_blank" rel="noopener">LinkedIn profile</a></div>
+</div></section>
+<footer><div class="wrap">© 2026 Sathish B. Chennai, India.</div></footer>
+
+<script>
+(function(){
+var pipe=document.getElementById('pipe'),dots=document.getElementById('dots'),al=document.getElementById('al'),
+an=document.getElementById('an'),inn=document.getElementById('in'),inc=document.getElementById('inc'),tg=document.getElementById('tg');
+var cols=['#1b7f79','#d98a0b','#6a5acd'];
+for(var i=0;i<12;i++){var d=document.createElement('span');d.className='dot';d.style.setProperty('--g',cols[i%3]);dots.appendChild(d);}
+function render(on){
+al.innerHTML='';var n=on?3:12;
+for(var j=0;j<n;j++){var b=document.createElement('i');if(on)b.style.background=cols[j];al.appendChild(b);}
+an.textContent=n;inn.textContent=on?1:12;
+inc.textContent=on?'One incident':'One per alert';
+tg.textContent=on?'Remove correlation':'Apply correlation';
+pipe.classList.toggle('on',on);
+}
+var on=false;render(on);
+tg.addEventListener('click',function(){on=!on;render(on);});
+})();
+</script>
+</body>
+</html>
